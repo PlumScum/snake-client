@@ -16,4 +16,10 @@ const mappings = {
   p: "Say: Time to eat"
 };
 
+const handleUserInput = (key) => {
+  // Short circuit if user does the Ctrl-C key
+  if (key === "\u0003") {
+    return process.exit();
+  }
+  
 module.exports = setupInput;
