@@ -1,32 +1,19 @@
-let connection;
-const setupInput = function(conn) {
-  connection = conn;
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
-  stdin.on("data", (data) => {
-    if (data === '\u0003') {
-      process.exit();
-    }
-    if (data === 'w') {
-      console.log("Move: up");
-      connection.write("Move: up");
-    }
-    if (data === 'a') {
-      console.log("Move: left");
-      connection.write("Move: left");
-    }
-    if (data === 's') {
-      console.log("Move: down");
-      connection.write("Move: down");
-    }
-    if (data === 'd') {
-      console.log("Move: right");
-      connection.write("Move: right");
-    }
-  });
-  return stdin;
+
+// Map key strokes to the write command string
+const mappings = {
+  w: "Move: up",
+  a: "Move: left",
+  s: "Move: down",
+  d: "Move: right",
+  t: "Say: It's futile!",
+  r: "Say: Insatiable...",
+  y: "Say: Why are you running?",
+  e: "Say: Fe fi fo...",
+  q: "Say: Give up!",
+  u: "Say: I got all day",
+  i: "Say: Run!",
+  o: "Say: Hello there",
+  p: "Say: Time to eat"
 };
 
 module.exports = setupInput;
