@@ -22,4 +22,12 @@ const handleUserInput = (key) => {
     return process.exit();
   }
   
+  
+    // handles all other key strokes
+  if (mappings[key]) {
+    connection.write(mappings[key]);
+  }
+};
+
+
 module.exports = setupInput;
