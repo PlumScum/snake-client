@@ -9,8 +9,6 @@ const connect = function() {
 
   conn.on('connect', () =>{
     conn.write("Say: Snek's Gonna Get Ya!!");
-  
-    console.log("Connection established!");
     
   });
   conn.on('data', (data) => {
