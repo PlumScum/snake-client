@@ -8,5 +8,9 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Getting Started
 
-- Follow steps inside the snek server repo to run the server side
+- Follow steps inside the [snek server repo](https://github.com/taniarascia/snek) to run the server side
 - Run the development snake client using the `node play.js` command.
+- Use the WASD keys to navigate the snake. W - Up, A - Left, S - Right, D - Down.
+- Use keys E through P to send programmed messages and taunts.
+- Avoid crashing into the walls or it's game over for your snake!
+- Press CTRL + C to quit the game
